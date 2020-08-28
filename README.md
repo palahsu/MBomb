@@ -13,3 +13,4 @@ pkg install python2
 git clone https://github.com/palahsu/G.Bomb.git
 cd M.Bomb.py
 python2 M.bomb.py
+ 
