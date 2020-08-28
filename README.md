@@ -10,7 +10,7 @@ apt upgrade
 apt update
 pkg install git
 pkg install python2
-git clone https://github.com/palahsu/G.Bomb.git
+git clone https://github.com/palahsu/M.Bomb.git
 cd M.Bomb.py
 python2 M.bomb.py
  
