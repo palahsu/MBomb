@@ -6,9 +6,13 @@ Please, Turn on Less Secure App Logins from your Gamil Account.
 
 ## How to use:
 `pkg install python2 -y`
+
 `pkg install git -y`
+
 `git clone https://github.com/palahsu/M.Bomb.git`
+
 `cd M.Bomb.py`
+
 `python2 M.bomb.py`
  
 # Note:
