@@ -26,7 +26,9 @@ It only works through Gmail, it does not identify the user as a spammer in any w
 For any kind of help, support, suggetion and request ask in my Telegram Group:
 https://t.me/AD0000000
 
-Follow on:
+# Follow on: 
+http://facebook.com - automatic!
+[Facebook](http://facebook.com/aduri.knox)
 
 
 Doante Me:
