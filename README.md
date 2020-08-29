@@ -30,6 +30,8 @@ https://t.me/AD0000000
 http://facebook.com - automatic!
 [Facebook](http://facebook.com/aduri.knox)
 
+![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](url)
 
 Doante Me:
 MasterCard payooner:v
