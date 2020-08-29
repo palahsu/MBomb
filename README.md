@@ -2,7 +2,7 @@
 
 Sign in to your Gmail
 Visit https://www.google.com/settings/security/lesssecureapps
-Please, Turn on Less Secure App Logins from your Gamil Account.
+Please, Turn on Less Secure App Logins from your Gamil Account. MBomb means Mail-Bomb and it's works for Sending Unlimited Mail. You can send unlimited message Gmail to Gmail.
 
 ## How to use:
 `pkg install python2 -y`
