@@ -33,5 +33,7 @@ http://facebook.com - automatic!
 ![GitHub Logo](/images/logo.png)
 Format: ![Alt Text](url)
 
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+
 Doante Me:
 MasterCard payooner:v
