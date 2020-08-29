@@ -27,13 +27,6 @@ For any kind of help, support, suggetion and request ask in my Telegram Group:
 https://t.me/AD0000000
 
 # Follow on: 
-http://facebook.com - automatic!
-[Facebook](http://facebook.com/aduri.knox)
-
-![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)
-
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
 
 Doante Me:
 MasterCard payooner:v
