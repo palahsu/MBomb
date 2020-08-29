@@ -1,4 +1,4 @@
-# M.Bomb
+# MBomb
 
 Sign in to your Gmail
 Visit https://www.google.com/settings/security/lesssecureapps
