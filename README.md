@@ -34,5 +34,3 @@ https://t.me/AD0000000
 </p><p align="left">
 <a href="https://facebook.com/Aduri.knox"><img src="https://img.shields.io/badge/Facebook-Follow%20on%20Facebook-blue.svg?logo=facebook"></a>
 </p><p align="left">
-<a href="https://instagram.com/palashgamer"><img src="https://img.shields.io/badge/Instagram-Follow%20on%20Instagram-important.svg?logo=instagram"></a>
-</p>
