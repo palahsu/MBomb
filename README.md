@@ -15,7 +15,7 @@ Please, Turn on Less Secure App Logins from your Gamil Account. MBomb means Mail
 
 `cd MBomb.py`
 
-`python MBomb.py`
+`python MBomb.py` or `python2 MBomb.py`
  
 # Note:
  If you find any problems than please write on issue and to my Telegram Group. To work properly in Android you have to Turn On Data and Please, Turn on your less secure option from Gmail. Don't use for revenge!
