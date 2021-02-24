@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-#=========================================================================================================================================
+#WARN
+#Please, Don't Copy Codes Without Owner Permission!!
 
 import os
 import random
@@ -40,7 +41,7 @@ print ('''
  :      :    :: : ::    : :  :    :      :    :: : ::   
                                                         
 
-                       ©copyright by \033[93mEngine Ripper \033[97m
+                       ©copyright by \033[93m@palahsu \033[97m
 
 ''')
 print(" ")
