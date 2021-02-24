@@ -13,7 +13,9 @@ Please, Turn on Less Secure App Logins from your Gamil Account. MBomb means Mail
 
 `git clone https://github.com/palahsu/MBomb.git`
 
-`cd MBomb.py`
+`cd MBomb`
+
+ls
 
 `python MBomb.py` or `python2 MBomb.py`
  
